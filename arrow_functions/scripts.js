@@ -14,6 +14,31 @@ var fraseToArray = (frase) => frase.split(' ');
 console.log(fraseToArray(frase)); // (6) ["Estou", "vendo", "como", "criar", "arrow", "functions!"]
 
 // arrow function sem parâmetro
-var semArg = () => console.log('Teste arrow function');
+var semParam = () => console.log('Teste arrow function');
 
-semArg();
+semParam();
+
+// arrow function em casos reais
+var roupas = [
+	{produto: 'Camisa', preco: 25, cor: 'Amarelo'},
+	{produto: 'Calça', preco: 80, cor: 'Azul'},
+	{produto: 'Jaqueta', preco: 100, cor: 'Preto'},
+	{produto: 'Camiseta', preco: 15, cor: 'Rosa'},
+	{produto: 'Calção', preco: 20, cor: 'Azul'},
+];
+
+var roupasAzuis = roupas.map((roupa) => {
+	return roupa.cor === 'Azul';
+});
+
+console.log(roupasAzuis);
+
+var precoAlto = roupas.filter((roupa) => {
+	return roupa.preco > 25;
+})
+
+console.log(precoAlto);
+
+setTimeout(() => {
+	console.log('Com setTimeout');
+}, 100);
