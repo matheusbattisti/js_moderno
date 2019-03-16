@@ -19,7 +19,7 @@ let arrB = [4,5,6];
 
 let arrC = [...arrA, ...arrB];
 
-console.log(arrC);
+console.log(arrC); // (6) [1, 2, 3, 4, 5, 6]
 
 // Rest
 function testandoRest(a, b, ...theArgs) {
