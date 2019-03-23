@@ -46,3 +46,28 @@ let [x,y,z] = 'xyz';
 console.log(x); // x
 console.log(y); // y
 console.log(z); // z
+
+// destructuring com rest
+const numeros2 = [1,2,3,4,5,6,7,8,9,10];
+
+const [parte1, ...parte2] = numeros2;
+
+console.log(parte1); // 1 
+console.log(parte2); // [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+// pitfalls
+const pessoa = {
+	nome: 'Alexia',
+	sobrenome: 'Couto'
+}
+
+let q,w;
+
+// {q , w} = pessoa; // Syntax Error
+
+({q, w} = pessoa); // ok
+
+// ({p1, p2}) = pessoa); // Uncaught SyntaxError
+
+const {p1, p2} = pessoa; // ok
